@@ -1,3 +1,7 @@
+library identifier: 'jenkins-lib@master', retriever: modernSCM(
+        [$class: 'GitSCMSource',
+         remote: 'git@bitbucket.org:brickvest/devops-jenkins.git',
+         credentialsId: 'ssh_deploy_key'])
 pipeline {
     agent any
     parameters {
