@@ -10,9 +10,10 @@ pipeline {
     }
     stages {
         stage('Example') {
+            helm.deploy("ee")
             steps {
 
-            helm.deploy("ee")
+
                 echo "Hello ${params.PERSON}"
             }
         }
